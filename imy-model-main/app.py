@@ -1,6 +1,6 @@
 import os
-from model.chatbot.kogpt2 import chatbot as ch_kogpt2
-# from model.chatbot.kobert import chatbot as ch_kobert
+#from model.chatbot.kogpt2 import chatbot as ch_kogpt2
+from model.chatbot.kobert import chatbot as ch_kobert
 from model.emotion import service as emotion
 from util.emotion import Emotion
 from util.depression import Depression
@@ -66,7 +66,7 @@ def classifyEmotionDiary():
     })
 
 
-
+"""
 @app.route('/chatbot/g')
 def reactChatbotV1():
     sentence = request.args.get("s")
@@ -80,8 +80,8 @@ def reactChatbotV1():
     return jsonify({
         "answer": answer
     })
-
 """
+
 @app.route('/chatbot/b')
 def reactChatbotV2():
     sentence = request.args.get("s")
@@ -96,7 +96,7 @@ def reactChatbotV2():
         "category": category,
         "category_info": desc
     })
-"""
+
 
 
 def predictDiary(s):
